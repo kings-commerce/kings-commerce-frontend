@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import MainLayout from "./userpages/components/Mainlayout";
+import MainLayout from "./userpages/components/mainlayout";
 import LandingPage from "./userpages/landing-page";
 
 function App() {
