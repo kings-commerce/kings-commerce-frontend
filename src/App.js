@@ -1,12 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import ShopPage from './pages/ShopPage';
+import "./App.css";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import MainLayout from "./userpages/components/mainlayout";
+import LandingPage from "./userpages/landing-page";
 
 function App() {
   return (
-    <div className="App">
-      <ShopPage/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<LandingPage />} />
+          <Route path="landing" element={<LandingPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
