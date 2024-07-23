@@ -1,17 +1,18 @@
 import React from "react";
 import googleIcon from "../assets/google-icon.svg";
+import { Link } from "react-router-dom";
 
-const CreateAccount = () => {
+const Login = () => {
   return (
     <div className="lg:bg-[#F5C30F] lg:h-screen flex justify-end">
       <div className="flex flex-col items-center bg-white w-full lg:w-[70%] lg:rounded-tl-[100px] lg:rounded-bl-[100px]">
         <div className="w-full px-10 lg:px-80 mt-20 space-y-8">
           <span className="flex justify-center text-[25px] w-[100%] font-extrabold text-center">
-            Create Account
+            Login
           </span>
           <div className="flex flex-row border w-full justify-center items-center px-2 h-12 space-x-2">
             <img src={googleIcon} alt="" className="w-7" />
-            <span>Sign up with Google</span>
+            <span>Login with Google</span>
           </div>
           <span className="flex flex-row items-center">
             <hr className="w-full h-[2px] bg-gray-900" />{" "}
@@ -19,17 +20,6 @@ const CreateAccount = () => {
             <hr className="w-full h-[2px] bg-gray-900" />
           </span>
           <div className="flex flex-col space-y-8">
-            <label className="input input-bordered flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                className="h-4 w-4 opacity-70"
-              >
-                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
-              </svg>
-              <input type="text" className="grow" placeholder="Full name" />
-            </label>
             <label className="input input-bordered flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,8 +48,14 @@ const CreateAccount = () => {
               <input type="password" className="grow" placeholder="password" />
             </label>
             <button className="btn bg-[#F5C30F] text-white w-full">
-              Button
+              Login
             </button>
+            <div>
+              Don't have an account?{" "}
+              <Link to={"/signup"}>
+                <span className="text-[#0000EE]">Sign up</span>{" "}
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -67,4 +63,4 @@ const CreateAccount = () => {
   );
 };
 
-export default CreateAccount;
+export default Login;
