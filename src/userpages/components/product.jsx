@@ -9,7 +9,7 @@ const Product = () => {
         Elegant Timepieces for Every Occasion
       </span>
       <span className="font-bold md:pl-3">Price: $199.99</span>
-      <div className="flex justify-center items-center rounded-lg mt-2 bg-[#F5C30F] w-48 lg:w-52 h-10 font-black gap-x-1 lg:ml-3 cursor-pointer">
+      <div className="flex justify-center items-center rounded-lg mt-2 bg-[#39BC3E] w-48 lg:w-52 h-10 font-black gap-x-1 lg:ml-3 cursor-pointer">
         SHOP NOW
         <svg
           width="15"

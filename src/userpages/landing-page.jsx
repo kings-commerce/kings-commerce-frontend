@@ -11,7 +11,7 @@ const LandingPage = () => {
 
   return (
     <div className="flex flex-col justify-center items-center overflow-hidden">
-      <div className=" shadow-2xl">
+      <div className="">
         <img src={landingImg} alt="" className="lg:-mt-40" />
       </div>
       <div className="flex flex-col mt-10 justify-center items-center w-full">
@@ -44,7 +44,7 @@ const LandingPage = () => {
                 trust that our accessories will keep your devices safe and
                 functional.
               </div>
-              <div className="flex justify-center items-center rounded-lg mt-2 bg-[#F5C30F] w-52 h-10 font-black gap-x-1 ml-3 cursor-pointer">
+              <div className="flex justify-center items-center rounded-lg mt-2 bg-[#39BC3E] w-52 h-10 font-black gap-x-1 ml-3 cursor-pointer">
                 Join the team
               </div>
             </div>
