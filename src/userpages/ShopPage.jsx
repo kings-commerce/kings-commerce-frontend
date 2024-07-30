@@ -1,5 +1,5 @@
 import React from 'react'
-import ShopCard from '../components/ShopCard'
+import ShopCard from './components/ShopCard'
 import book from '../assets/books.svg';
 import Footer from '../components/Footer';
 import watch from '../assets/watch.svg';
