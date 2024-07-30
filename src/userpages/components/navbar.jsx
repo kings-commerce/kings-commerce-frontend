@@ -38,11 +38,12 @@ const Navbar = () => {
     },
     {
       icon: aboutUs,
-      text: "About Us",
+      text: "About us",
     },
     {
       icon: contact,
-      text: "Contact US",
+      text: "Contact us",
+      link: "/contact-us",
     },
     {
       icon: shop,
@@ -54,12 +55,12 @@ const Navbar = () => {
     {
       icon: signinImg,
       text: "Sign In",
-      link: "/signin",
+      link: "signin",
     },
     {
       icon: signupImg,
       text: "Sign Up",
-      link: "/signup",
+      link: "signup",
     },
     {
       icon: cart,
@@ -69,7 +70,7 @@ const Navbar = () => {
     {
       icon: home,
       text: "Home",
-      link: "/landing",
+      link: "landing",
     },
     {
       icon: aboutUs,

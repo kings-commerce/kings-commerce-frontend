@@ -1,12 +1,16 @@
 import React from "react";
 import googleIcon from "../assets/google-icon.svg";
+import loginImg from "../assets/login-img.svg";
 import { Link } from "react-router-dom";
 
 const Signup = () => {
   return (
-    <div className="lg:bg-[#F5C30F] lg:h-screen flex justify-end">
-      <div className="flex flex-col items-center bg-white w-full lg:w-[70%] lg:rounded-tl-[100px] lg:rounded-bl-[100px]">
-        <div className="w-full px-10 lg:px-80 mt-20 space-y-8">
+    <div className="lg:h-screen flex justify-center items-center">
+      <div className="flex flex-row justify-between items-start bg-white w-full lg:w-[70%] lg:rounded-tl-[100px] lg:rounded-bl-[100px] h-[80%] shadow-md shadow-[#39BC3E] pl-36">
+        <div className="flex justify-center h-full">
+          <img src={loginImg} alt="" className="w-[300px]" />
+        </div>
+        <div className="w-[50%] px-10 mt-20 space-y-4">
           <span className="flex justify-center text-[25px] w-[100%] font-extrabold text-center">
             Create Account
           </span>
@@ -15,11 +19,11 @@ const Signup = () => {
             <span>Sign up with Google</span>
           </div>
           <span className="flex flex-row items-center">
-            <hr className="w-full h-[2px] bg-gray-900" />{" "}
+            <hr className="w-full h-[2px] bg-gray-900" />
             <span className="mx-1">OR</span>
             <hr className="w-full h-[2px] bg-gray-900" />
           </span>
-          <div className="flex flex-col space-y-8">
+          <div className="flex flex-col space-y-3">
             <label className="input input-bordered flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,13 +62,13 @@ const Signup = () => {
               </svg>
               <input type="password" className="grow" placeholder="password" />
             </label>
-            <button className="btn bg-[#F5C30F] text-white w-full">
+            <button className="btn bg-[#39BC3E] text-white w-full">
               Create Account
             </button>
             <div>
-              Already have an account?{" "}
-              <Link to={"/login"}>
-                <span className="text-[#0000EE]">Login</span>
+              Already have an account?
+              <Link to={"/signin"}>
+                <span className="text-[#0000EE]"> Signin</span>
               </Link>
             </div>
           </div>
