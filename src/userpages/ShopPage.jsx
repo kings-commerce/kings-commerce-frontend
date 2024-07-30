@@ -1,10 +1,10 @@
 import React from 'react'
 import ShopCard from './components/ShopCard'
 import book from '../assets/books.svg';
-import Footer from '../components/Footer';
 import watch from '../assets/watch.svg';
-import headset from '../assets/headset.svg';
 import phone from '../assets/phone.svg';
+
+
 
 const ShopPage = () => {
   return (
@@ -13,14 +13,13 @@ const ShopPage = () => {
             <ShopCard imageSrc={book} altText="home" label="Elegant Timepieces for Every Occasion" price="Price: $199.99" />
             <ShopCard imageSrc={watch} altText="home" label="Elegant Timepieces for Every Occasion" price="Price: $199.99" />
             <ShopCard imageSrc={phone} altText="home" label="Elegant Timepieces for Every Occasion" price="Price: $199.99" />
-            <ShopCard imageSrc={headset} altText="home" label="Elegant Timepieces for Every Occasion" price="Price: $199.99" />
+            <ShopCard imageSrc={phone} altText="home" label="Elegant Timepieces for Every Occasion" price="Price: $199.99" />
             <ShopCard imageSrc={watch} altText="home" label="Elegant Timepieces for Every Occasion" price="Price: $199.99" />
             <ShopCard imageSrc={book} altText="home" label="Elegant Timepieces for Every Occasion" price="Price: $199.99" />
             <ShopCard imageSrc={phone} altText="home" label="Elegant Timepieces for Every Occasion" price="Price: $199.99" />
-            <ShopCard imageSrc={headset} altText="home" label="Elegant Timepieces for Every Occasion" price="Price: $199.99" />
+            <ShopCard imageSrc={phone} altText="home" label="Elegant Timepieces for Every Occasion" price="Price: $199.99" />
         </div>
         <div className='mt-24'>
-            <Footer/>
         </div>
     </div>
   )
