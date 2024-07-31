@@ -39,6 +39,7 @@ const Navbar = () => {
     {
       icon: aboutUs,
       text: "About Us",
+      link: "/about"
     },
     {
       icon: contact,
@@ -74,7 +75,7 @@ const Navbar = () => {
     {
       icon: aboutUs,
       text: "About Us",
-      link: "",
+      link: "/about",
     },
     {
       icon: shop,
