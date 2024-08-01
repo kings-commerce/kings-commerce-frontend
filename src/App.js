@@ -5,6 +5,7 @@ import LandingPage from "./userpages/landing-page";
 import Signup from "./userpages/signup-page";
 import Login from "./userpages/login-page";
 import ContactUs from "./userpages/contact-us-page";
+import ShopOne from "./userpages/shop-one";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route index element={<LandingPage />} />
           <Route path="/landing" element={<LandingPage />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/shop-one" element={<ShopOne />} />
         </Route>
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Login />} />

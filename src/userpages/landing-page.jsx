@@ -1,6 +1,6 @@
 import React from "react";
 import landingImg from "../assets/landing-img.svg";
-import Product from "./components/product";
+import { Product } from "./components/product";
 import shoppersImg from "../assets/shoppers.svg";
 
 const LandingPage = () => {

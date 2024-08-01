@@ -1,6 +1,11 @@
 import React from "react";
 import headsetImg from "../../assets/headset.svg";
 
+//images
+import star from "../../assets/start.svg";
+import addCart from "../../assets/add-cart.svg";
+import favorite from "../../assets/favorite.svg";
+
 const Product = () => {
   return (
     <div className="flex flex-col max-w-64 px-1">
@@ -9,8 +14,8 @@ const Product = () => {
         Elegant Timepieces for Every Occasion
       </span>
       <span className="font-bold md:pl-3">Price: $199.99</span>
-      <div className="flex justify-center items-center rounded-lg mt-2 bg-[#39BC3E] w-48 lg:w-52 h-10 font-black gap-x-1 lg:ml-3 cursor-pointer">
-        SHOP NOW
+      <button className="btn flex justify-center items-center rounded-lg mt-2 bg-[#39BC3E] w-48 lg:w-full h-10 font-black gap-x-1 lg:ml-3 cursor-pointer">
+        Add to Cart
         <svg
           width="15"
           height="21"
@@ -23,9 +28,76 @@ const Product = () => {
             fill="black"
           />
         </svg>
+      </button>
+    </div>
+  );
+};
+
+const ShopOneProduct = ({ data, largeIsRequired }) => {
+  const stars = [];
+  for (let i = 1; i <= data.numberOfStars; i++) {
+    stars.push(star);
+  }
+
+  return (
+    <div
+      className={`flex flex-col justify-between ${
+        data.isLarge && largeIsRequired
+          ? "w-[350px]"
+          : "w-[280px] hover:border hover:shadow-lg"
+      } rounded-2xl pb-3 h-[400px]`}
+    >
+      <div className="relative">
+        <img
+          src={data.image}
+          alt=""
+          className="border rounded-2xl h-[200px] w-full"
+        />
+        <img
+          src={favorite}
+          alt=""
+          className="absolute top-2 right-2 w-7 rounded-full transition duration-300 hover:bg-[#E9AF4C]"
+        />
+      </div>
+      <div
+        className={`flex ${
+          data.isLarge && largeIsRequired
+            ? "flex-row justify-between"
+            : "flex-col"
+        } px-2`}
+      >
+        <div>
+          <span>{data.name}</span>
+          <div className="flex flex-row my-1">
+            {stars.map((star) => (
+              <img src={star} alt="" />
+            ))}
+            <span className="ml-2 text-gray-400"> {data.numSold}+ sold</span>
+          </div>
+          <div>
+            <span>${data.price}</span>
+            <span className="line-through text-gray-400 ml-2">
+              ${data.strikedPrice}
+            </span>
+          </div>
+        </div>
+        <div>
+          <button className="btn bg-[#39BC3E] text-white w-full rounded-lg h-10 mt-1 flex flex-row justify-center items-center">
+            Add to cart <img src={addCart} alt="" className="ml-1" />
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Product;
+const ProductCategory = ({ data }) => {
+  return (
+    <div className="flex flex-col justify-center items-center">
+      <img src={data.image} alt="" className="rounded-full w-[250px] mb-3" />
+      <span className="font-extrabold">{data.name}</span>
+    </div>
+  );
+};
+
+export { Product, ShopOneProduct, ProductCategory };

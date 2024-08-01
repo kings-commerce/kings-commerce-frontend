@@ -12,16 +12,7 @@ const ContactUs = () => {
         </div>
         <div className="w-[50%] px-10 mt-20 space-y-4">
           <span className="flex justify-center text-[25px] w-[100%] font-extrabold text-center">
-            Login
-          </span>
-          <div className="flex flex-row border w-full justify-center items-center px-2 h-12 space-x-2">
-            <img src={googleIcon} alt="" className="w-7" />
-            <span>Login with Google</span>
-          </div>
-          <span className="flex flex-row items-center">
-            <hr className="w-full h-[2px] bg-gray-900" />{" "}
-            <span className="mx-1">OR</span>
-            <hr className="w-full h-[2px] bg-gray-900" />
+            Contact Us
           </span>
           <div className="flex flex-col space-y-8">
             <label className="input input-bordered flex items-center gap-2">
