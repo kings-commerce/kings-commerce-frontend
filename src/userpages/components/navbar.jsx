@@ -17,38 +17,39 @@ const Navbar = () => {
     {
       icon: signinImg,
       text: "Sign In",
-      link: "signin",
+      link: "/signin",
     },
     {
       icon: signupImg,
       text: "Sign Up",
-      link: "signup",
+      link: "/signup",
     },
     {
       icon: cart,
       text: "Cart",
-      link: "checkout",
+      link: "/checkout",
     },
   ];
 
   const navbarItemsTwo = [
     {
       text: "Home",
-      link: "landing",
+      link: "/landing",
     },
     {
       icon: aboutUs,
-      text: "About us",
+      text: "About Us",
+      link: "/about",
     },
     {
       icon: contact,
-      text: "Contact us",
-      link: "contact-us",
+      text: "Contact US",
+      link: "/contact-us",
     },
     {
       icon: shop,
       text: "Store",
-      link: "shop",
+      link: "/shop",
     },
   ];
 
@@ -56,37 +57,37 @@ const Navbar = () => {
     {
       icon: signinImg,
       text: "Sign In",
-      link: "signin",
+      link: "/signin",
     },
     {
       icon: signupImg,
       text: "Sign Up",
-      link: "signup",
+      link: "/signup",
     },
     {
       icon: cart,
       text: "Cart",
-      link: "checkout",
+      link: "/cart",
     },
     {
       icon: home,
       text: "Home",
-      link: "landing",
+      link: "/landing",
     },
     {
       icon: aboutUs,
       text: "About Us",
-      link: "",
+      link: "/about",
     },
     {
       icon: shop,
       text: "Shop",
-      link: "shop",
+      link: "/shop",
     },
     {
       icon: contact,
       text: "Contact",
-      link: "",
+      link: "/contact-us",
     },
     {
       icon: search,
