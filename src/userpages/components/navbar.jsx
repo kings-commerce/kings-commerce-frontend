@@ -17,17 +17,17 @@ const Navbar = () => {
     {
       icon: signinImg,
       text: "Sign In",
-      link: "/signin",
+      link: "signin",
     },
     {
       icon: signupImg,
       text: "Sign Up",
-      link: "/signup",
+      link: "signup",
     },
     {
       icon: cart,
       text: "Cart",
-      link: "",
+      link: "checkout",
     },
   ];
 
@@ -43,11 +43,12 @@ const Navbar = () => {
     {
       icon: contact,
       text: "Contact us",
-      link: "/contact-us",
+      link: "contact-us",
     },
     {
       icon: shop,
       text: "Store",
+      link: "shop",
     },
   ];
 
@@ -65,7 +66,7 @@ const Navbar = () => {
     {
       icon: cart,
       text: "Cart",
-      link: "",
+      link: "checkout",
     },
     {
       icon: home,
@@ -80,7 +81,7 @@ const Navbar = () => {
     {
       icon: shop,
       text: "Shop",
-      link: "",
+      link: "shop",
     },
     {
       icon: contact,

@@ -13,7 +13,7 @@ const Product = () => {
       <span className="font-bold md:pl-3">
         Elegant Timepieces for Every Occasion
       </span>
-      <span className="font-bold md:pl-3">Price: $199.99</span>
+      <span className="font-bold md:pl-3">Price: GH₵199.99</span>
       <button className="btn flex justify-center items-center rounded-lg mt-2 bg-[#39BC3E] w-48 lg:w-full h-10 font-black gap-x-1 lg:ml-3 cursor-pointer">
         Add to Cart
         <svg
@@ -75,9 +75,9 @@ const ShopOneProduct = ({ data, largeIsRequired }) => {
             <span className="ml-2 text-gray-400"> {data.numSold}+ sold</span>
           </div>
           <div>
-            <span>${data.price}</span>
+            <span>GH₵{data.price}</span>
             <span className="line-through text-gray-400 ml-2">
-              ${data.strikedPrice}
+              GH₵{data.strikedPrice}
             </span>
           </div>
         </div>
