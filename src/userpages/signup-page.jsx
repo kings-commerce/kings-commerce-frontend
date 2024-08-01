@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 const Signup = () => {
   return (
-    <div className="lg:h-screen flex justify-center items-center">
-      <div className="flex flex-row justify-between items-start bg-white w-full lg:w-[70%] lg:rounded-tl-[100px] lg:rounded-bl-[100px] h-[80%] shadow-md shadow-[#39BC3E] pl-36">
-        <div className="flex justify-center h-full">
+    <div className="lg:h-screen flex justify-center items-center lg:py-5">
+      <div className="flex flex-row justify-between items-start bg-white w-full lg:w-[70%] lg:rounded-tl-[100px] px-3 pb-20 md:pb-0 lg:pb-0 md:px-0 lg:px-0 lg:rounded-bl-[100px] h-[90%] md:shadow-md lg:shadow-md md:shadow-[#39BC3E] lg:shadow-[#39BC3E] md:pl-36 lg:pl-36 md:mt-0 lg:mt-0 mt-20">
+        <div className="hidden md:flex lg:flex justify-center h-full">
           <img src={loginImg} alt="" className="w-[300px]" />
         </div>
-        <div className="w-[50%] px-10 mt-20 space-y-4">
+        <div className="w-full md:w-[50%] lg:w-[50%] md:px-10 lg:px-10 mt-10 md:mt-20 lg:mt-20 space-y-4">
           <span className="flex justify-center text-[25px] w-[100%] font-extrabold text-center">
             Create Account
           </span>

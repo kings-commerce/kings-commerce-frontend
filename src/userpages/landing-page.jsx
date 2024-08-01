@@ -20,8 +20,10 @@ const LandingPage = () => {
         </span>
         {/* Product display */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row space-x-2 lg:w-[80%]">
-          {productArr.map((pro) => (
-            <div className="mb-5">{pro}</div>
+          {productArr.map((pro, index) => (
+            <div key={index} className="mb-5">
+              {pro}
+            </div>
           ))}
         </div>
       </div>
@@ -44,9 +46,9 @@ const LandingPage = () => {
                 trust that our accessories will keep your devices safe and
                 functional.
               </div>
-              <div className="flex justify-center items-center rounded-lg mt-2 bg-[#39BC3E] w-52 h-10 font-black gap-x-1 ml-3 cursor-pointer">
+              <button className="btn flex justify-center items-center rounded-lg mt-2 bg-[#39BC3E] w-52 h-10 font-black gap-x-1 ml-3 cursor-pointer">
                 Join the team
-              </div>
+              </button>
             </div>
           </div>
         </div>

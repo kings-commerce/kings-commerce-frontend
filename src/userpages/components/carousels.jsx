@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Carousel } from "primereact/carousel";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -17,6 +18,7 @@ function LandingSwipeableTextMobileStepper({ data }) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
   const maxSteps = data.length;
+  const navigate = useNavigate();
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -52,7 +54,10 @@ function LandingSwipeableTextMobileStepper({ data }) {
         {data.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
-              <div className="flex flex-row justify-between px-14">
+              <div
+                className="flex flex-row justify-between px-14"
+                onClick={() => navigate("/shop/products")}
+              >
                 <div className="text-[#127816] text-center md:text-[50px] lg:text-[50px] flex justify-center items-center font-extrabold">
                   {step.label}
                 </div>
@@ -156,7 +161,7 @@ function SwipeableTextMobileStepperOne({ data }) {
         enableMouseEvents
       >
         {data.map((step, index) => (
-          <div key={step.label}>
+          <div key={step.index}>
             {Math.abs(activeStep - index) <= 2 ? (
               <div className="flex flex-row justify-center items-center px-2 md:px-14 lg:px-14 relative overflow-hidden">
                 <div
@@ -241,7 +246,7 @@ function SwipeableTextMobileStepperComponent({ data }) {
         interval={5000}
       >
         {data.map((step, index) => (
-          <div key={step.label}>
+          <div key={step.index}>
             {Math.abs(activeStep - index) <= 2 ? (
               <div className="flex flex-row justify-center px-14 relative">
                 <div className="w-[35%]">

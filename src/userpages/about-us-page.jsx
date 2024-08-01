@@ -69,7 +69,7 @@ function About() {
             </span>
           </div>
           <div>
-            <button className="btn px-5 py-3 rounded-[20px] font-montserrat self-center bg-primary-300 bg-[#39BC3E]">
+            <button className="btn px-5 py-3 rounded-[20px] font-montserrat self-center bg-primary-300 bg-[#39BC3E] text-white">
               Join the team
             </button>
           </div>
@@ -161,11 +161,11 @@ function About() {
         <div>
           <img src={team2} alt="team" />
         </div>
-        <div className="mx-auto flex flex-col items-center">
+        <div className="mx-auto flex flex-col items-start">
           <span className="text-3xl text-primary-300 font-semibold w-[60%]">
             We are open to new members
           </span>
-          <button className="rounded-3xl p-3 bg-primary-400 w-60 font-semibold text-2xl">
+          <button className="bg-[#39BC3E] text-white rounded-3xl p-3 bg-primary-400 w-52 font-semibold text-2xl mt-6">
             Join the team
           </button>
         </div>

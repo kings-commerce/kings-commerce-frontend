@@ -6,10 +6,9 @@ import Signup from "./userpages/signup-page";
 import Login from "./userpages/login-page";
 import ContactUs from "./userpages/contact-us-page";
 import About from "./userpages/about-us-page";
-import ShopPage from "./userpages/ShopPage";
+import ShopProductPage from "./userpages/shop-product-page";
 import Checkout from "./userpages/checkout";
-
-import ShopOne from "./userpages/shop-one";
+import ShopPage from "./userpages/shop-page";
 
 function App() {
   return (
@@ -19,9 +18,9 @@ function App() {
           <Route index element={<LandingPage />} />
           <Route path="/landing" element={<LandingPage />} />
           <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/shop" element={<ShopPage />} />
+          <Route path="shop/products" element={<ShopProductPage />} />
           <Route path="/checkout" element={<Checkout />} />
-          <Route path="/shop-one" element={<ShopOne />} />
+          <Route path="/shop" element={<ShopPage />} />
           <Route path="/about" element={<About />} />
         </Route>
         <Route path="/signup" element={<Signup />} />

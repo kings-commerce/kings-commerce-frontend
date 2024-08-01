@@ -69,8 +69,8 @@ const ShopOneProduct = ({ data, largeIsRequired }) => {
         <div>
           <span>{data.name}</span>
           <div className="flex flex-row my-1">
-            {stars.map((star) => (
-              <img src={star} alt="" />
+            {stars.map((star, index) => (
+              <img key={index} src={star} alt="" />
             ))}
             <span className="ml-2 text-gray-400"> {data.numSold}+ sold</span>
           </div>

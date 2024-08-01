@@ -22,9 +22,9 @@ import ankaLogo from "../assets/anka-logo.svg";
 import ublLogo from "../assets/ubl-logo.svg";
 import logitechLogo from "../assets/logitech-logo.svg";
 
-function ShopOne() {
+function ShopPage() {
   const dataArr = productData.filter((data) => data.isLarge);
-  const logos = [sumsungLogo, appleLogo, ankaLogo, ublLogo, logitechLogo];
+
   return (
     <div className="container w-full overflow-hidden">
       <LandingSwipeableTextMobileStepper data={landingCarouselimgdata} />
@@ -42,9 +42,12 @@ function ShopOne() {
             "Chargers",
             "Wireless mouse",
             "Pendrives",
-          ].map((product) => {
+          ].map((product, index) => {
             return (
-              <span className="flex items-center border border-gray-300 rounded-2xl h-10 w-full mx-3 px-3">
+              <span
+                key={index}
+                className="flex items-center border border-gray-300 rounded-2xl h-10 w-full mx-3 px-3"
+              >
                 {product}
               </span>
             );
@@ -52,9 +55,9 @@ function ShopOne() {
         </div>
       </div>
       <div className="flex flex-wrap justify-center items-start space-x-4 px-32 mt-10">
-        {productData.map((product) => {
+        {productData.map((product, index) => {
           return (
-            <div className="mb-10">
+            <div key={index} className="mb-10">
               <ShopOneProduct data={product} largeIsRequired={false} />
             </div>
           );
@@ -134,4 +137,4 @@ function ShopOne() {
   );
 }
 
-export default ShopOne;
+export default ShopPage;

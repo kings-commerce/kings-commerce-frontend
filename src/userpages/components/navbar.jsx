@@ -55,6 +55,11 @@ const Navbar = () => {
 
   const mobileSideBarItems = [
     {
+      icon: home,
+      text: "Home",
+      link: "/landing",
+    },
+    {
       icon: signinImg,
       text: "Sign In",
       link: "/signin",
@@ -65,15 +70,16 @@ const Navbar = () => {
       link: "/signup",
     },
     {
-      icon: cart,
-      text: "Cart",
-      link: "/cart",
+      icon: search,
+      text: "Search",
+      link: "",
     },
     {
-      icon: home,
-      text: "Home",
-      link: "/landing",
+      icon: cart,
+      text: "Cart",
+      link: "/checkout",
     },
+
     {
       icon: aboutUs,
       text: "About Us",
@@ -90,11 +96,6 @@ const Navbar = () => {
       link: "/contact-us",
     },
     {
-      icon: search,
-      text: "Search",
-      link: "",
-    },
-    {
       icon: profile,
       text: "Profile",
       link: "",
@@ -102,7 +103,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="drawer bg-white">
+    <div className="drawer bg-white z-50">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
@@ -139,15 +140,15 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal flex justify-between items-center">
                   <label className="input input-bordered flex items-center gap-2">
                     <input type="text" className="" placeholder="Search" />
-                    <button className="bg-[#E9AF4C] text-white h-[110%] w-32 rounded-[15px] z-50 -mr-10">
+                    <button className="btn bg-[#E9AF4C] text-white h-[110%] w-32 rounded-[15px] z-50 -mr-10">
                       Search
                     </button>
                   </label>
                   {/* Navbar menu content here */}
                   <div className="flex flex-row justify-between w-[40%]">
-                    {navbarItems.map((item) => {
+                    {navbarItems.map((item, index) => {
                       return (
-                        <li>
+                        <li key={index}>
                           <Link
                             to={item.link}
                             className="flex flex-row justify-center items-center"
@@ -188,9 +189,9 @@ const Navbar = () => {
                 </label>
                 {/* Navbar menu content here */}
                 <div className="flex flex-row justify-between w-[40%]">
-                  {navbarItems.map((item) => {
+                  {navbarItems.map((item, index) => {
                     return (
-                      <li>
+                      <li key={index}>
                         <Link
                           to={item.link}
                           className="flex flex-row justify-center items-center"
@@ -215,10 +216,10 @@ const Navbar = () => {
         </div>
         {/* Second bar */}
         <div className="lg:flex hidden flex-row list-none justify-center items-center w-full bg-base-300 space-x-7 h-12">
-          {navbarItemsTwo.map((item) => {
+          {navbarItemsTwo.map((item, index) => {
             return (
-              <li>
-                <span>
+              <li key={index}>
+                <span className="btn bg-base-300 outline-none border-none">
                   <Link
                     to={item.link}
                     className="flex flex-row justify-center items-center"
@@ -241,9 +242,9 @@ const Navbar = () => {
         <ul className="menu bg-base-200 min-h-full w-80 p-4">
           {/* Sidebar content here */}
           <div className="flex flex-col justify-between w-[70%] mt-20 space-y-5">
-            {mobileSideBarItems.map((item) => {
+            {mobileSideBarItems.map((item, index) => {
               return (
-                <li>
+                <li key={index}>
                   <Link
                     to={item.link}
                     className="flex flex-row justify-start items-center w-full text-[20px] font-bold"
