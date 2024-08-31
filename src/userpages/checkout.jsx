@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Table from "./components/checkoutTable";
 import { IoArrowBackCircle } from "react-icons/io5";
 
 const Checkout = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="">
       <div className="mx-[100px] mt-[90px] mb-[80px]"></div>
@@ -13,7 +16,10 @@ const Checkout = () => {
             Shopping Cart
           </p>
           <Table />
-          <button className="w-[200px] h-[40px] mx-5 border border-black rounded-3xl text-black flex items-center justify-center">
+          <button
+            className="w-[200px] h-[40px] mx-5 border border-black rounded-3xl text-black flex items-center justify-center"
+            onClick={() => navigate("/")}
+          >
             <IoArrowBackCircle className="mr-2" />
             Continue shopping
           </button>

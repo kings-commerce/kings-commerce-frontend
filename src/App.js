@@ -1,6 +1,7 @@
 import "./App.css";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import MainLayout from "./userpages/components/mainlayout";
+import AdminLayout from "./adminpages/components/adminlayout";
 import LandingPage from "./userpages/landing-page";
 import Signup from "./userpages/signup-page";
 import Login from "./userpages/login-page";
@@ -9,6 +10,11 @@ import About from "./userpages/about-us-page";
 import ShopProductPage from "./userpages/shop-product-page";
 import Checkout from "./userpages/checkout";
 import ShopPage from "./userpages/shop-page";
+import Dashboard from "./adminpages/dashboard";
+import PendingOrdersPage from "./adminpages/pending-orders";
+import InProgressPage from "./adminpages/in-progress";
+import CompletedDeliveryPage from "./adminpages/completed-delivery";
+import SettingsPage from "./adminpages/settings";
 
 function App() {
   return (
@@ -25,6 +31,22 @@ function App() {
         </Route>
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Login />} />
+        <Route path="/dashboard" element={<AdminLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route
+            path="/dashboard/pending-orders"
+            element={<PendingOrdersPage />}
+          ></Route>
+          <Route
+            path="/dashboard/in-progress"
+            element={<InProgressPage />}
+          ></Route>
+          <Route
+            path="/dashboard/completed-delivery"
+            element={<CompletedDeliveryPage />}
+          ></Route>
+          <Route path="/dashboard/settings" element={<SettingsPage />}></Route>
+        </Route>
       </Routes>
     </BrowserRouter>
   );

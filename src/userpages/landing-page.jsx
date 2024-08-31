@@ -1,9 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import landingImg from "../assets/landing-img.svg";
 import { Product } from "./components/product";
 import shoppersImg from "../assets/shoppers.svg";
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+
   const productArr = [];
   for (let i = 0; i <= 15; i++) {
     productArr.push(<Product />);
@@ -46,7 +49,10 @@ const LandingPage = () => {
                 trust that our accessories will keep your devices safe and
                 functional.
               </div>
-              <button className="btn flex justify-center items-center rounded-lg mt-2 bg-[#39BC3E] w-52 h-10 font-black gap-x-1 ml-3 cursor-pointer">
+              <button
+                className="btn flex justify-center items-center rounded-lg mt-2 bg-[#39BC3E] w-52 h-10 font-black gap-x-1 ml-3 cursor-pointer"
+                onClick={() => navigate("/")}
+              >
                 Join the team
               </button>
             </div>

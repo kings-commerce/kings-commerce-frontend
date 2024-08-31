@@ -10,7 +10,6 @@ import home from "../../assets/home-img.svg";
 import profile from "../../assets/profile-img.svg";
 import search from "../../assets/search-img.svg";
 import shop from "../../assets/shop-img.svg";
-import Signup from "../signup-page";
 
 const Navbar = () => {
   const navbarItems = [
@@ -157,7 +156,7 @@ const Navbar = () => {
                               <img src={item.icon} className="w-7" />
                               {item.text === "Cart" ? (
                                 <span className="bg-[#E9AF4C] absolute top-0 right-0 rounded-full w-4 h-4 flex items-center justify-center">
-                                  0
+                                  2
                                 </span>
                               ) : null}
                             </span>
@@ -200,7 +199,7 @@ const Navbar = () => {
                             <img src={item.icon} className="w-7" />
                             {item.text === "Cart" ? (
                               <span className="bg-[#E9AF4C] absolute top-0 right-0 rounded-full w-4 h-4 flex items-center justify-center">
-                                0
+                                2
                               </span>
                             ) : null}
                           </span>
