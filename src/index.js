@@ -6,7 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import { PrimeReactProvider } from "primereact/api";
 import "./index.css";
 
-// import "primeflex/primeflex.css"; // uncomment this one out before you go to the dashboard
+import "primeflex/primeflex.css"; // uncomment this one out before you go to the dashboard
 import "primereact/resources/primereact.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primeicons/primeicons.css";
