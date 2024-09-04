@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { PrimeReactProvider } from "primereact/api";
+import "./index.css";
 
-import "primeflex/primeflex.css";
+// import "primeflex/primeflex.css"; // uncomment this one out before you go to the dashboard
 import "primereact/resources/primereact.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primeicons/primeicons.css";
@@ -17,6 +18,7 @@ root.render(
   <React.StrictMode>
     <PrimeReactProvider>
       <App />
+      <SpeedInsights />
     </PrimeReactProvider>
   </React.StrictMode>
 );
